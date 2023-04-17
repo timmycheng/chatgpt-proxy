@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
+    console.log("Called rewrite! ${req}")
     return [
       {
         source: "/proxy/:slug*",
@@ -13,9 +14,9 @@ const nextConfig = {
       },
     ];
   },
-  async afterRewrite(route, result,{req,res}){
-    console.log("Reworte ${req.url} to ${result.destination}")
-  },
+  // async afterRewrite(route, result,{req,res}){
+  //   console.log("Reworte ${req.url} to ${result.destination}")
+  // },
 };
 
 module.exports = nextConfig;
