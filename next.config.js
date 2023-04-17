@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
-    console.log("Called rewrite! ${req}")
+    // console.log("Called rewrite! ${req}")
     return [
       {
         source: "/proxy/:slug*",
