@@ -1,0 +1,1 @@
+console.log("Sending request to openai at " + new Date().toLocaleDateString);
