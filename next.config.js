@@ -13,6 +13,9 @@ const nextConfig = {
       },
     ];
   },
+  async afterRewrite(route, result,{req,res}){
+    console.log("Reworte ${req.url} to ${result.destination}")
+  },
 };
 
 module.exports = nextConfig;
